@@ -7,6 +7,7 @@ tsdbproxy_root=/ts/sbin
 # each config file for one instance
 configs="/ts/etc/ks.yaml"
 pidfile="/ts/etc/tsdbproxy.pid"
+nohupfile="/ts/etc/nohup.tsdbproxy.out."$(date -d "today" +"%Y%m%d")
 
 ulimit -c unlimited
 echo 1 > /proc/sys/fs/suid_dumpable
@@ -16,7 +17,7 @@ ulimit -n 1024000
  
 start() {
 	test -f $pidfile && echo "tsdbproxy is running" 
-	nohup $tsdbproxy_root/tsdbproxy -config $configs &
+	nohup $tsdbproxy_root/tsdbproxy -config $configs >> $nohupfile &
 	sleep 1
 	test -f $pidfile && echo "Start tsdbproxy success"
 }
