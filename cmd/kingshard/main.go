@@ -135,7 +135,7 @@ func main() {
 		return
 	}
 	
-        var monitor_svr *server.ServerMonitor
+    var monitor_svr *server.ServerMonitor
 	monitor_svr, err = server.NewMonitorServer(cfg)
 	if err != nil {
 		golog.Error("main", "main", err.Error(), 0)

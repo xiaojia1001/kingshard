@@ -16,7 +16,6 @@ package config
 
 import (
 	"io/ioutil"
-	"os"
 
 	"gopkg.in/yaml.v2"
 )
@@ -26,11 +25,11 @@ var configFileName string
 
 //整个config文件对应的结构
 type Config struct {
-	PidPath     string       `yaml:"pidfile"`
-	Addr     string `yaml:"addr"`
-	MonitorAddr string       `yaml:"monitor_addr"`
-	User     string `yaml:"user"`
-	Password string `yaml:"password"`
+	PidPath     string `yaml:"pidfile"`
+	Addr        string `yaml:"addr"`
+	MonitorAddr string `yaml:"monitor_addr"`
+	User        string `yaml:"user"`
+	Password    string `yaml:"password"`
 
 	WebAddr     string `yaml:"web_addr"`
 	WebUser     string `yaml:"web_user"`

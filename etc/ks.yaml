@@ -1,14 +1,14 @@
 pidfile : /ts/etc/tsdbproxy.pid
 # server listen addr
-addr : 0.0.0.0:9595
-monitor_addr : 0.0.0.0:19595
+addr : 0.0.0.0:9600
+monitor_addr : 0.0.0.0:19600
 
 # server user and password
 user :  tsdbproxy
 password : tsdbproxy
 
 # the web api server
-web_addr : 0.0.0.0:9797
+web_addr : 0.0.0.0:9700
 #HTTP Basic Auth
 web_user : admin
 web_password : admin
@@ -89,7 +89,7 @@ schema :
         type: range
         locations: [3,3]
         table_row_base: 50000000
-        table_row_limit: 2600
+        table_row_limit: 500000
 
     - 
         db : taskserver
@@ -99,7 +99,7 @@ schema :
         type: range
         locations: [3,3]
         table_row_base: 50000000
-        table_row_limit: 2600
+        table_row_limit: 500000
     -   
         db : taskserver
         table: task
@@ -108,7 +108,7 @@ schema :
         type: range
         locations: [3,3]
         table_row_base: 50000000
-        table_row_limit: 2600
+        table_row_limit: 500000
     -
         db : taskserver
         table: subtask
@@ -117,7 +117,7 @@ schema :
         type: range
         locations: [3,3]
         table_row_base: 50000000
-        table_row_limit: 2600
+        table_row_limit: 500000
     -
         db : taskserver
         table: task_attention
@@ -126,7 +126,7 @@ schema :
         type: range
         locations: [3,3]
         table_row_base: 50000000
-        table_row_limit: 2600
+        table_row_limit: 500000
     -
         db : taskserver
         table: task_tag
@@ -135,4 +135,4 @@ schema :
         type: range
         locations: [3,3]
         table_row_base: 50000000
-        table_row_limit: 2600
+        table_row_limit: 500000
