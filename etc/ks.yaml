@@ -1,11 +1,11 @@
-pidfile : /ts/etc/tsdbproxy.pid
+pidfile : /uc/etc/ucdbproxy.pid
 # server listen addr
 addr : 0.0.0.0:9600
 monitor_addr : 0.0.0.0:19600
 
 # server user and password
-user :  tsdbproxy
-password : tsdbproxy
+user :  ucdbproxy
+password : ucdbproxy
 
 # the web api server
 web_addr : 0.0.0.0:9700
@@ -15,7 +15,7 @@ web_password : admin
 
 # if set log_path, the sql log will write into log_path/sql.log,the system log
 # will write into log_path/sys.log
-log_path : /var/log/uclog/tsdbproxy
+log_path : /var/log/uclog/ucdbproxy
 
 # log level[debug|info|warn|error],default error
 log_level : debug

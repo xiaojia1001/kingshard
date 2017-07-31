@@ -8,7 +8,7 @@ source ./dev.sh
 
 go tool yacc -o ./sqlparser/sql.go ./sqlparser/sql.y
 gofmt -w ./sqlparser/sql.go
-source  genver.sh
-go build -o ./bin/tsdbproxy ./cmd/kingshard
+source ./genver.sh
+go build -o ./bin/ucdbproxy ./cmd/kingshard
 
 
